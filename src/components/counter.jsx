@@ -6,15 +6,28 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"]
   };
 
+  constructor() {
+    super();
+    this.handleIncrement = this.handleIncrement.bind(this); //bind event handler (setar o this)
+  }
+
   render() {
     return (
       <React.Fragment>
-        <h1>Hello World </h1>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
+        <button
+          onClick={this.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
         {this.renderTags()}
       </React.Fragment>
     );
+  }
+
+  handleIncrement() {
+    this.setState({ count: this.state.count + 1 }); //this.state.count++ nao funciona pq temos que avisar pro React que o State mudou
   }
 
   renderTags() {
