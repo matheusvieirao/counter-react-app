@@ -21,7 +21,7 @@ class Counter extends Component {
         >
           Increment
         </button>
-        {this.renderTags()}
+        <br />
       </React.Fragment>
     );
   }
