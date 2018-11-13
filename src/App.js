@@ -13,6 +13,13 @@ class App extends Component {
     ]
   };
 
+  constructor() {
+    super();
+    console.log("app - constructor");
+  }
+
+  //  componentDidMount(){}    //lugar para se fazer chamadas para o servidor com Ajax
+
   handleReset = () => {
     const counters = this.state.counters.map(c => {
       c.value = 0;
