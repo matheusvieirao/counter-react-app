@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class Counter extends Component {
   constructor(props) {
     super(props);
-    //this.handleIncrement = this.handleIncrement.bind(this); //bind event handler (setar o this)
   }
 
   render() {
